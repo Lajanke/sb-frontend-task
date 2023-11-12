@@ -3,7 +3,7 @@ import styles from './styles'
 
 const Image = (props) => {
   const { imageText, imageUrl } = props.imageData
-  
+
   return (
     <img
       src={imageUrl}
