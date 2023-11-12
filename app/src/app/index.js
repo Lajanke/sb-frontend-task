@@ -4,11 +4,18 @@ import LikeButton from './children/like_button'
 import styles from './styles'
 
 const App = (props) => {
-  const { data } = props
+  const imageText = props.data.edge_media_to_caption.edges[0].node.text
+  const imageUrl = props.data.display_url
+
+  const imageData = {
+    imageText,
+    imageUrl
+  }
+
   return (
     <main style={styles.main}>
-      <div style={styles.image}>
-        <Image data={data} />
+      <div style={styles.imageContainer}>
+        <Image imageData={imageData} />
       </div>
       <div style={styles.text}>
         <p>User block</p>
