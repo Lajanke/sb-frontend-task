@@ -4,7 +4,6 @@ const UserSection = (props) => {
   const { userImage, userName, userLocation } = props.userData
 
   return (
-
     <>
       <img
         src={userImage}
@@ -16,7 +15,6 @@ const UserSection = (props) => {
         <p style={styles.userLocation}>{userLocation}</p>
       </div>
     </>
-
   )
 }
 

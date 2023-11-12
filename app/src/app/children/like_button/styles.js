@@ -19,6 +19,6 @@ export default {
 
   heartContainer: {
     marginRight: '1.5em',
-    alignItems: 'center',
+    alignItems: 'center'
   }
 }
