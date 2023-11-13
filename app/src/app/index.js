@@ -3,6 +3,7 @@ import Image from './children/image'
 import LikesSection from './children/likes-section'
 import styles from './styles'
 import UserSection from './children/user-section'
+import CommentsSection from './children/comments-section'
 
 const App = (props) => {
   const imageText = props.data.edge_media_to_caption.edges[0].node.text
@@ -15,6 +16,8 @@ const App = (props) => {
   const likedByViewer = props.data.viewer_has_liked
   const numberOfLikes = props.data.edge_media_preview_like.count
   const datePosted = props.data.taken_at_timestamp
+
+  const comments = props.data.edge_media_to_comment.edges
 
   const imageData = {
     imageText,
@@ -33,6 +36,12 @@ const App = (props) => {
     datePosted
   }
 
+  const commentData = {
+    comments,
+    captionComment: imageText,
+    captionUserName: userName
+  }
+
   return (
     <main style={styles.main}>
       <div style={styles.imageContainer}>
@@ -43,17 +52,7 @@ const App = (props) => {
           <UserSection userData={userData} />
         </div>
         <div style={styles.commentsSection}>
-          <p>Comments block</p>
-          <p>Comments block</p>
-          <p>Comments block</p>
-          <p>Comments block</p>
-          <p>Comments block</p>
-          <p>Comments block</p>
-          <p>Comments block</p>
-          <p>Comments block</p>
-          <p>Comments block</p>
-          <p>Comments block</p>
-          <p>Comments block</p>
+          <CommentsSection commentData={commentData} />
         </div>
         <div style={styles.likesContainer}>
           <LikesSection likesData={likesData} />

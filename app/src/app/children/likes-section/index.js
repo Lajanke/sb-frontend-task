@@ -25,7 +25,7 @@ const LikesSection = ({ likesData: { likedByViewer, numberOfLikes, datePosted } 
         <p style={styles.postTime}>{timeSincePost.toUpperCase()}</p>
       </div>
       <button style={styles.heartContainer} onClick={handleHeartClick} aria-label={`like button ${liked ? 'already liked' : 'not liked'}`}>
-        {liked ? <LikedIcon /> : <UnlikeIcon />}
+        {liked ? <LikedIcon size={28} /> : <UnlikeIcon size={28} />}
       </button>
     </>
   )
