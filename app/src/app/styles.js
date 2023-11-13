@@ -48,7 +48,6 @@ export default {
     order: '2',
     flex: '1 0',
     alignSelf: 'flex-start',
-    maxHeight: '75%',
     overflow: 'auto',
     marginLeft: '1em',
     borderTop: 'solid 1px',
