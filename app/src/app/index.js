@@ -6,8 +6,8 @@ import { UserSection } from './children/user-section'
 import { CommentsSection } from './children/comments-section'
 import styles from './styles.module.css'
 
-const App = (props) => {
-  const { imageData, userData, commentData, likesData } = formatData(props.data)
+const App = ({ data }) => {
+  const { imageData, userData, commentData, likesData } = formatData(data)
 
   return (
     <main className={styles.main}>

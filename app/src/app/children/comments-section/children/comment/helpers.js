@@ -1,3 +1,5 @@
+import dompurify from 'dompurify'
+
 export const formatComment = (comment, userName) => {
   const matches = comment.match(/\B(#[a-zA-Z]+\b)/gm)
 
@@ -9,5 +11,7 @@ export const formatComment = (comment, userName) => {
     formattedComment = formattedComment.replace(match, `<a href=''>${match}</a>`)
   })
 
-  return `<b>${userName}</b> ${formattedComment}`
+  const sanitizedComment = dompurify.sanitize(`<b>${userName}</b> ${formattedComment}`)
+
+  return sanitizedComment
 }
