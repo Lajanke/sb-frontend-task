@@ -8,6 +8,7 @@ export const formatComment = (comment, userName) => {
   let formattedComment = comment
 
   matches.forEach((match) => {
+    //included a blank href so hashtags still act like links as there is no link information available in the given data. 
     formattedComment = formattedComment.replace(match, `<a href=''>${match}</a>`)
   })
 

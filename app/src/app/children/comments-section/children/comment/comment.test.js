@@ -8,7 +8,7 @@ jest.mock('../../../likes-section/helpers', () => ({
 }))
 
 const defaultProps = {
-  formattedComment: "<b>username</b> comment with a <a href=''>#hashtag</a>",
+  formattedSanitizedComment: "<b>username</b> comment with a <a href=''>#hashtag</a>",
   likedByViewer: false
 }
 

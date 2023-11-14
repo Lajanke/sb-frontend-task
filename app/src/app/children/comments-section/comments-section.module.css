@@ -8,3 +8,7 @@
   margin-bottom: 0.4em;
   white-space: pre-wrap;
 }
+
+.commentText a {
+  text-decoration: none;
+}

@@ -13,6 +13,10 @@
   margin-bottom: 0.4em;
 }
 
+.commentText a {
+  text-decoration: none;
+}
+
 .heartContainer {
   padding-right: 1.2em;
   padding-left: 1em;
