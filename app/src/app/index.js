@@ -1,19 +1,29 @@
 import React from 'react'
-import Image from './children/image'
-import LikeButton from './children/like_button'
-import styles from './styles'
+import { formatData } from './helpers'
+import { Image } from './children/image'
+import { LikesSection } from './children/likes-section'
+import { UserSection } from './children/user-section'
+import { CommentsSection } from './children/comments-section'
+import styles from './styles.module.css'
 
-const App = (props) => {
-  const { data } = props
+const App = ({ data }) => {
+  const { imageData, userData, commentData, likesData } = formatData(data)
+
   return (
-    <main style={styles.main}>
-      <div style={styles.image}>
-        <Image data={data} />
+    <main className={styles.main}>
+      <div className={styles.imageContainer}>
+        <Image imageData={imageData} />
       </div>
-      <div style={styles.text}>
-        <p>User block</p>
-        <p>Comments block</p>
-        <LikeButton />
+      <div className={styles.text}>
+        <div className={styles.userSection}>
+          <UserSection userData={userData} />
+        </div>
+        <div className={styles.commentsSection}>
+          <CommentsSection commentData={commentData} />
+        </div>
+        <div className={styles.likesContainer}>
+          <LikesSection likesData={likesData} />
+        </div>
       </div>
     </main>
   )
