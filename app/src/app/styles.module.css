@@ -1,0 +1,68 @@
+.main {
+  background-color: #fbfbfb;
+  border: 1px solid #e6e6e6;
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px;
+  max-width: 935px;
+  margin: 16px auto;
+  width: calc(100% - 40px);
+  aspect-ratio: 1.9 / 1;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: stretch;
+  align-items: flex-start;
+}
+
+.imageContainer {
+  order: 1;
+  flex: 1 0 65%;
+  align-self: center;
+}
+
+.text {
+  order: 2;
+  flex: 1 0 35%;
+  align-self: flex-start;
+  background-color: #fff;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flexStart;
+  min-height: 100%;
+}
+
+.userSection {
+  order: 1;
+  flex: 0 0 80px;
+  align-self: flex-start;
+  display: flex;
+  flex-direction: row;
+  margin-left: 1em;
+  align-items: center;
+}
+
+.commentsSection {
+  order: 2;
+  flex: 1 0;
+  align-self: flex-start;
+  overflow: auto;
+  margin-left: 1em;
+  border-top: solid 1px;
+  border-image: linear-gradient(to right, #eeeeee 90%, transparent 50%) 100% 1;
+  width: calc(100% - 1em);
+}
+
+.likesContainer {
+  order: 3;
+  flex: 0 0 45px;
+  align-self: flex-start;
+  margin-left: 1em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: calc(100% - 1em);
+}
+

@@ -1,9 +1,9 @@
 import React from 'react'
 import { Image } from './children/image'
 import { LikesSection } from './children/likes-section'
-import styles from './styles'
 import { UserSection } from './children/user-section'
 import { CommentsSection } from './children/comments-section'
+import styles from './styles.module.css'
 
 const App = (props) => {
   const imageText = props.data.edge_media_to_caption.edges[0].node.text
@@ -43,18 +43,18 @@ const App = (props) => {
   }
 
   return (
-    <main style={styles.main}>
-      <div style={styles.imageContainer}>
+    <main className={styles.main}>
+      <div className={styles.imageContainer}>
         <Image imageData={imageData} />
       </div>
-      <div style={styles.text}>
-        <div style={styles.userSection}>
+      <div className={styles.text}>
+        <div className={styles.userSection}>
           <UserSection userData={userData} />
         </div>
-        <div style={styles.commentsSection}>
+        <div className={styles.commentsSection}>
           <CommentsSection commentData={commentData} />
         </div>
-        <div style={styles.likesContainer}>
+        <div className={styles.likesContainer}>
           <LikesSection likesData={likesData} />
         </div>
       </div>
