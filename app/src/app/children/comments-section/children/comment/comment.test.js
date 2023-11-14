@@ -1,7 +1,6 @@
-import React from 'react'
 import { render } from '@testing-library/react'
 import '@testing-library/jest-dom'
-import Comment from '.'
+import { Comment } from '.'
 
 const defaultProps = {
   formattedComment: "<b>username</b> comment with a <a href=''>#hashtag</a>",

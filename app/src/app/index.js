@@ -3,7 +3,7 @@ import { Image } from './children/image'
 import { LikesSection } from './children/likes-section'
 import styles from './styles'
 import { UserSection } from './children/user-section'
-import CommentsSection from './children/comments-section'
+import { CommentsSection } from './children/comments-section'
 
 const App = (props) => {
   const imageText = props.data.edge_media_to_caption.edges[0].node.text

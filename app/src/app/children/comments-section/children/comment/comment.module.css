@@ -1,0 +1,25 @@
+.listItem {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.commentText {
+  font-size: 0.95em;
+  letter-spacing: -0.03em;
+  margin-top: 0;
+  margin-bottom: 0.4em;
+}
+
+.heartContainer {
+  padding-right: 1.2em;
+  padding-left: 1em;
+}
+
+.likeButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+}

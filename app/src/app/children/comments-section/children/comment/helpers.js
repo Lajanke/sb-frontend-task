@@ -1,4 +1,4 @@
-const formatComment = (comment, userName) => {
+export const formatComment = (comment, userName) => {
   const matches = comment.match(/\B(#[a-zA-Z]+\b)/gm)
 
   if (matches === null) return `<b>${userName}</b> ${comment}`
@@ -11,5 +11,3 @@ const formatComment = (comment, userName) => {
 
   return `<b>${userName}</b> ${formattedComment}`
 }
-
-export default formatComment

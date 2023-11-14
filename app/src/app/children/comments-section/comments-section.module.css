@@ -1,0 +1,10 @@
+.list {
+  padding: 0;
+}
+
+.commentText {
+  font-size: 1em;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.4em;
+  white-space: pre-wrap;
+}

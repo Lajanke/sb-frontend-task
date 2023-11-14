@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import styles from './likes-section.module.css'
 import UnlikeIcon from './children/unliked-icon'
 import LikedIcon from './children/liked-icon'

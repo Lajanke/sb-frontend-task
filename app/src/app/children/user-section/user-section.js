@@ -7,7 +7,7 @@ export const UserSection = (props) => {
     <>
       <img
         src={userImage}
-        alt={`${userName} profile image`}
+        alt={`${userName} profile`}
         className={styles.userImage}
       />
       <div className={styles.userTextContainer}>
