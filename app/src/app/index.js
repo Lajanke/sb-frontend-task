@@ -2,7 +2,7 @@ import React from 'react'
 import Image from './children/image'
 import LikesSection from './children/likes-section'
 import styles from './styles'
-import UserSection from './children/user-section'
+import {UserSection} from './children/user-section'
 import CommentsSection from './children/comments-section'
 
 const App = (props) => {

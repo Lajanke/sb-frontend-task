@@ -1,7 +1,7 @@
 import React from 'react'
 import { render } from '@testing-library/react'
 import '@testing-library/jest-dom'
-import UserSection from '.'
+import { UserSection } from '.'
 
 const mockUserData =
     { userImage: 'image-url.png', userName: 'user-name', userLocation: 'user-location' }

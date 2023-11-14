@@ -1,0 +1,21 @@
+.userImage {
+    height: 3.3em;
+}
+
+.userTextContainer {
+    margin-left: 0.5em;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.1em;
+}
+
+.userName {
+    font-size: 1em;
+    font-weight: 700;
+    margin: 0;
+}
+
+.userLocation {
+    font-size: 0.8em;
+    margin: 0
+}
