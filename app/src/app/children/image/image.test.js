@@ -1,7 +1,7 @@
 import React from 'react'
 import { render } from '@testing-library/react'
 import '@testing-library/jest-dom'
-import Image from '.'
+import { Image } from '.'
 
 const mockImageData = {
   imageText: 'mock_caption_text',

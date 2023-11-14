@@ -1,7 +1,7 @@
 import React from 'react'
 import { fireEvent, render } from '@testing-library/react'
 import '@testing-library/jest-dom'
-import {LikesSection} from './likes-section'
+import { LikesSection } from './likes-section'
 import { getTimeSincePost } from './helpers'
 
 jest.mock('./helpers', () => ({
