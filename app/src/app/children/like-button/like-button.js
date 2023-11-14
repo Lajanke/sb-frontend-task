@@ -2,13 +2,13 @@ import { useState } from 'react'
 import { LikedIcon, UnlikedIcon } from '.'
 import styles from '../likes-section/likes-section.module.css'
 
-export const LikeButton = ({ size, setLikedCount = () => {}, likedByViewer }) => {
+export const LikeButton = ({ size, likeButtonClicked = () => {}, likedByViewer }) => {
   const [liked, setLiked] = useState(likedByViewer)
 
   const handleHeartClick = () => {
     if (liked) {
-      setLikedCount(-1)
-    } else { setLikedCount(1) }
+      likeButtonClicked(-1)
+    } else { likeButtonClicked(1) }
     setLiked(!liked)
   }
 

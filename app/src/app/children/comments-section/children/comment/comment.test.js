@@ -28,4 +28,10 @@ describe('Comment', () => {
     const hashtag = getByRole('link')
     expect(hashtag).toHaveTextContent('#hashtag')
   })
+
+  it('displays an unliked icon by default when the comment is not liked by the viewer', () => {
+    const { getByLabelText } = render(<Comment {...defaultProps} />)
+
+    expect(getByLabelText('unliked icon')).toBeInTheDocument()
+  })
 })

@@ -17,7 +17,7 @@ export const LikesSection = ({ likesData: { likedByViewer, numberOfLikes, datePo
         <p className={styles.likeCount}>{`${likedCount.toLocaleString()} likes`}</p>
         <p className={styles.postTime}>{timeSincePost.toUpperCase()}</p>
       </div>
-      <LikeButton size={28} setLikedCount={handleLikeCount} likedByViewer={likedByViewer} />
+      <LikeButton size={28} likeButtonClicked={handleLikeCount} likedByViewer={likedByViewer} />
     </>
   )
 }

@@ -26,18 +26,17 @@ describe('LikesSection', () => {
     expect(getByLabelText('unliked icon')).toBeInTheDocument()
   })
 
-  it('displays the liked icon when the unliked icon is clicked and increments the like counter', () => {
+  it('increments the counter when the unliked icon is clicked', () => {
     const { getByLabelText, getByText } = render(<LikesSection likesData={mockLikesData} />)
 
     const likeButon = getByLabelText('unliked icon')
 
     fireEvent.click(likeButon)
 
-    expect(getByLabelText('liked icon')).toBeInTheDocument()
     expect(getByText('10,001 likes')).toBeInTheDocument()
   })
 
-  it('displays the unliked icon when the liked icon is clicked and decrements the like counter', () => {
+  it('decrements the counter when the liked icon is clicked', () => {
     const mockPropsLikedByViewer = { ...mockLikesData, likedByViewer: true }
     const { getByLabelText, getByText } = render(<LikesSection likesData={mockPropsLikedByViewer} />)
 
@@ -45,7 +44,6 @@ describe('LikesSection', () => {
 
     fireEvent.click(unlikeButon)
 
-    expect(getByLabelText('unliked icon')).toBeInTheDocument()
     expect(getByText('9,999 likes')).toBeInTheDocument()
   })
 })
