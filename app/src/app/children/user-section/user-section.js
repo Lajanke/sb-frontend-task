@@ -1,4 +1,4 @@
-import styles from './user-section.css'
+import styles from './user-section.module.css'
 
 export const UserSection = (props) => {
   const { userImage, userName, userLocation } = props.userData
