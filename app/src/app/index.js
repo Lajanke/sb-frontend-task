@@ -7,7 +7,7 @@ import { CommentsSection } from './children/comments-section'
 import styles from './styles.module.css'
 
 const App = (props) => {
-  const {imageData, userData, commentData, likesData} = formatData(props.data)
+  const { imageData, userData, commentData, likesData } = formatData(props.data)
 
   return (
     <main className={styles.main}>
