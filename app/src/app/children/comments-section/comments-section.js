@@ -1,5 +1,5 @@
-import { Comment } from './children/comment/comment'
-import { formatComment } from './children'
+import { Comment, formatComment } from './children'
+
 import styles from './comments-section.module.css'
 
 export const CommentsSection = ({ commentData: { comments, captionComment, captionUserName } }) => {
@@ -18,5 +18,3 @@ export const CommentsSection = ({ commentData: { comments, captionComment, capti
     </ul>
   )
 }
-
-export default CommentsSection

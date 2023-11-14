@@ -1,6 +1,11 @@
 import { render } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import { Comment } from '.'
+import { getTimeSincePost } from '../../../likes-section/helpers'
+
+jest.mock('../../../likes-section/helpers', () => ({
+  getTimeSincePost: jest.fn()
+}))
 
 const defaultProps = {
   formattedComment: "<b>username</b> comment with a <a href=''>#hashtag</a>",
@@ -8,6 +13,9 @@ const defaultProps = {
 }
 
 describe('Comment', () => {
+  beforeEach(() => {
+    getTimeSincePost.mockReturnValue('4 days')
+  })
   it('displays a comment with the username in bold', () => {
     const { getByText } = render(<Comment {...defaultProps} />)
 
